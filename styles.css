@@ -191,9 +191,21 @@ footer {
     text-align: center;
     overflow: hidden;
     /* Ensure the button doesn't overflow outside the container */
-    height: 52vh;
+    height: 56vh;
     /* Ensure the height of each location container adjusts dynamically based on content */
     transition: box-shadow 0.3s ease;
+}
+
+.location .image,
+.house .image {
+    height: 150px;
+    /* Adjust the height of the image */
+    width: 100%;
+    /* Ensure the image takes the full width of its container */
+    object-fit: cover;
+    /* Ensure the image covers the entire container */
+    background-color: #eee;
+    /* Add a background color as a fallback */
 }
 
 .location:hover {
@@ -257,4 +269,101 @@ footer {
 .location:hover .image {
     background-image: url('Nairobi-1.jpg');
     /* Image on hover */
+}
+
+#houses-on-rent {
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevent wrapping to next row */
+    justify-content: space-between;
+    /* Evenly distribute items along main axis */
+}
+
+.house {
+    flex: 0 0 calc(33.33% - 20px);
+    /* Set each house box to occupy one-third of the available width minus margin */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    height: 352px;
+    /* Adjust height of house boxes */
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    /* Add margin between house boxes */
+    display: flex;
+    /* Use flexbox for internal layout */
+    flex-direction: column;
+    /* Arrange child elements vertically */
+    justify-content: space-between;
+    /* Distribute child elements vertically */
+}
+
+.house:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.house h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.house p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.house .btn {
+    background-color: #A52A2A;
+    /* Brown color */
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    /* Fill entire width of the box */
+}
+
+.house .btn:hover {
+    background-color: yellowgreen;
+    /* Green color */
+}
+
+.house .image {
+    flex-grow: 1;
+    /* Allow image to grow and occupy remaining space */
+    background-image: url('house1.jpeg');
+    /* Default image */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+    /* Add transition for background image */
+}
+
+.house:hover .image {
+    background-image: url('house2.jpg');
+    /* Image on hover */
+}
+
+#separator {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.separator-line {
+    border-top: 2px solid #ccc;
+    margin: 0 auto 1rem;
+    width: 50%;
+}
+
+#separator h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
